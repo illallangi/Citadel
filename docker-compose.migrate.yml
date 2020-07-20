@@ -4,8 +4,6 @@ services:
   migrate:
     build: .
     entrypoint: ./citadel migrate
-    volumes:
-      - ./migrations:/root/migrations
     depends_on:
       - postgres
     networks:

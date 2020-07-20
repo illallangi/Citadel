@@ -18,4 +18,5 @@ FROM alpine:latest
 WORKDIR /root/
 COPY --from=backend /usr/src/app/dist/citadel .
 COPY --from=backend /usr/src/app/conf/app.example.toml conf/app.toml
+COPY migrations migrations
 CMD ["./citadel", "web"]
